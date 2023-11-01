@@ -1,1 +1,10 @@
+body{
+    background-color: white;
+}
 
+p {
+    padding:  2rem;
+    border: 2rem solid red;
+    background-color: aqua;
+    margin: 3rem;
+};
