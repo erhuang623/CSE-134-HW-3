@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        
+        <meta 
+            name="description"
+            content="Author: Eric Huang"
+        >
+
+
+        <title>CSE 134B HW 2 Portfolio Website</title>
+    </head>
+
+<h1>Contact</h1> 
+<nav>
+    <button onclick="window.location.href='index.html'">About</button>
+    <button onclick="window.location.href='Resume.html'">Resume</button>
+    <button onclick="window.location.href='Contact.html'">Contact</button>
+</nav>
+
+<hr></hr>
+<body>
+
+    <section id="myContacts">
+    <h2><caption>My Contact</caption></h2>
+    <table>
+        <caption>Form of contact</caption>
+        <colgroup>
+            <col span="2" style="background-color:rgb(236, 213, 4)">
+          </colgroup>
+        <tr>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        <tr>
+            <td>JamieMiller@fake.com</td>
+            <td>123-456-7890</td>
+        </tr>
+    </table>
+    </section>
+    
+
+
+
+
+    <section id="contactMe">
+    <form>
+        <fieldset>
+            <legend>Contact Me!</legend>
+            <label>Your email:</label>
+            <input type="email"> <br>
+
+            <label for="occupation">Select which best describes you:</label>
+            <select id="occupation">
+                <optgroup label="Education">
+                    <option value="highSchool">High School</option>
+                    <option value="undergrad">Undergraduate</option>
+                    <option value="college">Graduate</option>
+                </optgroup>
+            </select> <br>
+
+
+                <label for="workExperience">Select your work experience</label>
+                <datalist id="experience">
+                        <option value="Entry"></option>
+                        <option value="Intermediate"></option>
+                        <option value="Employer"></option>
+                </datalist>
+                <input list="experience" id="workExperience">
+            
+            <br>
+
+            <label id="Inquiries">Any Questions?</label>    
+            <textarea id="Inquiries">Your Question</textarea>
+            <button type="submit">submit</button> 
+        </fieldset>
+    </form>
+    </section>
+
+</body>
+
+</html>
