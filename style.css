@@ -1,10 +1,128 @@
-body{
-    background-color: white;
+:root {
+    --main--color--header: hsl(0, 4.2%, 9.4%);
+    --secondary--color--header: hsl(0, .4%, 48.8%);
+    --ternary--color--header: hsl(53, 25%, 73.3%);
+    --other--color--header: hsl(0, 6.7%, 94.1%);
 }
 
-p {
-    padding:  2rem;
-    border: 2rem solid red;
-    background-color: aqua;
-    margin: 3rem;
-};
+* {
+    margin: 0;
+    font-size: 1.2 rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: .1rem;
+    line-height: 1.7rem;
+}
+
+header {
+    font-size: 25px;
+    color: white;
+    background-color: var(--main--color--header); 
+    height: 6em;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+
+nav > button {
+    color: black;
+    border: 1px solid black;
+    background-color: var(--other--color--header);
+    padding: 5px 15px; /*button size*/;
+    font-size: m;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+button:hover {
+    color: white;
+}
+
+nav {
+    text-align: right;
+}
+
+
+.Info {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 300px 250px;
+    width: 100%;
+    height: 100%;
+    row-gap: 20px; 
+    column-gap: 20px;
+}
+
+.Info h2{
+    text-align: center;
+}
+
+.Self  {
+    grid-column-start: 2;
+    
+}
+
+body {
+    background-color: var(--other--color--header);
+}
+picture > img {
+    border: 5px solid var(--main--color--header);
+}
+
+#About {
+    background-color: antiquewhite;
+    grid-column-start: 3 ;
+    grid-column-end: 3;
+    grid-row-start: 1;
+}
+
+#Bio {
+    background-color: antiquewhite;
+    grid-column-start: 2 ;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    padding-left: 2em;
+
+}
+
+#Personality {
+    background-color: antiquewhite;
+    grid-column-start: 4;
+    grid-row-start: 1;
+}
+
+#Skills {
+    background-color: antiquewhite;
+    grid-column-start: 5;
+    grid-row-start: 1;
+}
+
+#Hobbies {
+    background-color: antiquewhite;
+    grid-column-start: 6;
+    grid-row-start: 1;
+}
+
+
+/* #Projects {
+
+} */
+
+
+/*
+@media  screen and (max-width: 640px) {
+    nav:first-child {
+        visibility: visible;
+    }
+    
+}
+*/
+
+

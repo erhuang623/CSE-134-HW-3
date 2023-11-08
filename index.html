@@ -9,7 +9,7 @@
         <meta name="author" content="Eric Huang">
 
 
-        <link rel="styesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
 
         <title>CSE 134B HW 3 Portfolio Website</title>
     </head>
@@ -18,94 +18,92 @@
 <body>
 
 <header>
+
+    <nav>
+        <button onclick="window.location.href='index.html'">About</button>
+        <button onclick="window.location.href='Resume.html'">Resume</button>
+        <button onclick="window.location.href='Contact.html'">Contact</button>
+    </nav>
+
     <h1>Portfolio</h1> 
 </header>
-<nav>
-    <button onclick="window.location.href='index.html'">About</button>
-    <button onclick="window.location.href='Resume.html'">Resume</button>
-    <button onclick="window.location.href='Contact.html'">Contact</button>
-</nav>
 
 <hr>
 
 <main>
-    <figure>
-        <img src="/Images/Jamie_Miller.png" alt="Picture of Jamie Miller" width="300" height="300"> 
-        <figcaption><h2>Eric Huang</h2></figcaption>
-    </figure>
-
-    <section id="About">
-        <h2>About</h2>
-            <ul>
-                <li>Age: 20</li>
-                <li>Career: Fulltime UCSD Student</li>
-                <li>Location: San Diego</li>
-                <li>Education: UC San Diego</li>
-            </ul>
-    </section>
-
-    <section id="Bio">
-        <h2>Bio</h2>
-
-        <p>Eric is a 20 year old software engineer that works specifically on Data Science and machine learning to learn trends in gameplay features. <br>
-            To wind down, Jamie goes on hikes after work while reading about the <strong>latest</strong> technological products such as the newest <em>iPhone</em> device or VR headset. <br>
-            On weekends he tends to enjoy getting together with his old college friends to play board games like <i>DND</i> and indulging in <b>video games</b>.
-        </p>
-
-            <aside>
-                <h4>DND</h4>
-                DND(Dungeons and Dragons)is a fantasy tabletop rpg game where players build their own story and tell an adventure.
-            </aside>
+    <div class="Info">
+        <picture class="Self">
+            <img src="/Images/headshot.png" alt="Picture of Eric Huang" > 
+            <h1>Eric Huang</h1>
             
+        </picture>
+    
+    
+        <section id="About">
+            <h2>About</h2>
+                <ul>
+                    <li>Age: 20</li>
+                    <li>Career: Fulltime UCSD Student</li>
+                    <li>Location: San Diego</li>
+                    <li>Education: UC San Diego</li>
+                </ul>
+        </section>
+
+        <section id="Bio">
+            <h3>Bio</h3>
+
+            <p>
+                Hello, my name is Eric, I am a 20 year old fulltime third year student majoring in Mathematics-Computer Science and minoring in Computing music. 
+                My insterest for computer science stemmed from my love of video games and their immersive worlds I experienced in my youth.
+                I originally wanted to do something related to game development but now, I am currently interested in frontend development
+                as well as understanding the process of creating digital music. I have participated in clubs such as ACM and Triton Gaming as a casual member. 
+                To wind down, I usually listen to a wide variety of music genres such as Rap, 
+                On weekends he tends to enjoy getting together with his old friends to play FPS games like Apex Legends and indulging in video games.
+            </p>
+        </section>
+
+        <section id="Personality">
+                <h2>Personality</h2>
+                <ul>
+                    <li>Team Oriented</li>
+                    <li>Busy</li> 
+                    <li>Organized</li>
+                    <li>Independent</li>
+                    <li>Active</li>
+                    <li>Safe</li>
+                </ul>
+
+        </section>
+
+        <section id="Skills">
+            <h2>Skills</h2>
+                <ul>
+                    <li>C++</li>
+                    <li>C</li>
+                    <li>Java</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JS</li>
+                </ul>
+        </section>
+ 
+                
+        <section id="Hobbies">
+            <h2>Hobbies</h2>
+                <ul>
+                    <li>Gyming</li>
+                    <li>Video Games</li>
+                    <li>Finding new Music</li>
+                </ul>
+
+
+        </section>
+
+        
     </section>
     
-    <section id="Personality">
-            <h3>Personality</h3>
-            <ul>
-                <li>Analytical</li>
-                <li>Busy</li> 
-                <li>Organized</li>
-                <li>Independent</li>
-                <li>Active</li>
-                <li>Safe</li>
-            </ul>
-
-    </section>
-
-    <section>
-        <h3>Skills</h3>
-            <ul>
-                <li>Knime</li>
-                <li>Matlab</li>
-                <li>Jupyter</li>
-                <li>Pandas</li>
-            </ul>
-    </section>
-                
-    <section>
-        <h3>Hobbies</h3>
-
-        <ul>
-            <li>Hiking</li>
-            <li>DND</li>
-            <li>RPG Games</li>
-            <li>Chess</li>
-        </ul>
-
-        My favorite song!
-        
-        <audio controls>
-            <source src="/Audio/Meatball-Parade.mp3">
-        </audio>
-
-    </section>
     
 </main>
 
-<footer>
-    <hr>
-    Made by Eric Huang, <br>
-    <span lang="zh">你好世界</span>
-</footer>
-    </body>
+</body>
 </html>
