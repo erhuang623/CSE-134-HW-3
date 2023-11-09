@@ -3,6 +3,8 @@
     --secondary--color--header: hsl(0, .4%, 48.8%);
     --ternary--color--header: hsl(53, 25%, 73.3%);
     --other--color--header: hsl(0, 6.7%, 94.1%);
+    /* font-size: 62.5%; */
+
 }
 
 * {
@@ -17,11 +19,12 @@ header {
     font-size: 25px;
     color: white;
     background-color: var(--main--color--header); 
-    height: 6em;
+    height: 6.5rem;
     text-align: center;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     
 }
+
 
 *,
 *::before,
@@ -29,19 +32,19 @@ header {
     box-sizing: border-box;
 }
 
-
-
 nav > button {
     color: black;
     border: 1px solid black;
     background-color: var(--other--color--header);
     padding: 5px 15px; /*button size*/;
-    font-size: m;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    
+    font-size: medium;
+    font-family:Arial, Helvetica, sans-serif;
+    transition: all .5s ease-out;
+    border-radius: 5%;
 }
 
-button:hover {
+nav > button:hover, button:focus {
+    background-color: black;
     color: white;
 }
 
@@ -58,11 +61,14 @@ nav {
     height: 100%;
     row-gap: 20px; 
     column-gap: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .Info h2{
     text-align: center;
+
 }
+
 
 .Self  {
     grid-column-start: 2;
@@ -81,6 +87,50 @@ picture > img {
     grid-column-start: 3 ;
     grid-column-end: 3;
     grid-row-start: 1;
+    font-size: 1.1rem;
+    border-radius: 10%;
+}
+
+#About:hover {
+    transform: scale(1.2,1.2);
+    
+}
+
+#Personality {
+    background-color: antiquewhite;
+    grid-column-start: 4;
+    grid-row-start: 1;
+    font-size: 1.1rem;
+    border-radius: 10%;
+}
+
+#Personality:hover {
+    transform: scale(1.2,1.2);
+}
+
+#Skills {
+    background-color: antiquewhite;
+    grid-column-start: 5;
+    grid-row-start: 1;
+    font-size: 1.1rem;
+    border-radius: 10%;
+}
+
+#Skills:hover {
+    transform: scale(1.2,1.2);
+    
+}
+
+#Hobbies {
+    background-color: antiquewhite;
+    grid-column-start: 6;
+    grid-row-start: 1;
+    font-size: 1.1rem;
+    border-radius: 10%;
+}
+
+#Hobbies:hover {
+    transform: scale(1.2,1.2);
 }
 
 #Bio {
@@ -89,31 +139,60 @@ picture > img {
     grid-column-end: 6;
     grid-row-start: 2;
     padding-left: 2em;
-
+    padding-top: 1rem;
+    border-radius: 5%;
+    overflow: hidden;
 }
 
-#Personality {
-    background-color: antiquewhite;
-    grid-column-start: 4;
-    grid-row-start: 1;
+#Bio > p {
+    animation-duration: 1.5s;
+    animation-name: slide;
 }
 
-#Skills {
-    background-color: antiquewhite;
-    grid-column-start: 5;
-    grid-row-start: 1;
-}
-
-#Hobbies {
-    background-color: antiquewhite;
-    grid-column-start: 6;
-    grid-row-start: 1;
-}
-
-
-/* #Projects {
-
+/* @keyframes slide {
+    from {
+        margin-left: 100%;
+        width: 300%;
+      }
+    
+      to {
+        margin-left: 0%;
+        width: 100%;
+      }
 } */
+.container {
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px;
+    text-align: center;
+    column-gap: 20px;
+}
+
+
+.references {
+    display:  grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+#links {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    
+}
+
+#links > a{
+    color: black;
+}
+
+#links > a:hover{
+    color: gray;
+}
+
+.references > a:visited {
+    text-decoration: none;
+}
+
 
 
 /*
