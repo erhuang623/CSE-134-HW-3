@@ -1,12 +1,16 @@
 :root {
     /* Default Color Mode */
     --main--color--header: hsl(0, 4.2%, 9.4%);
-    --secondary--color--header: hsl(0, .4%, 48.8%);
-    --ternary--color--header: hsl(53, 25%, 73.3%);
-    --other--color--header: hsl(0, 6.7%, 94.1%);
+    --secondary--color--altheader: hsl(0, .4%, 48.8%);
+    --ternary--color--textbackground: hsl(53, 25%, 73.3%);
+    --other--color--body: hsl(0, 6.7%, 94.1%);
     --red--white--mix: colormix(red, white); 
     /* Dark Mode */
-
+    --text--color-header:  hsl(0, 0%, 87%);
+    --lightGray--color-header: hsl(0, 0%, 66%);
+    --gray--color-header: hsl(0, 0%, 55%);
+    --darkGray--color-header: hsl(0, 0%, 37%);
+    --darkestGray--color-header: hsl(0, 0%, 26%);
     
 }
 
@@ -264,18 +268,22 @@ picture > img {
 
     #About {
         display: block;
+        transform: none !important;
     }
 
     #Personality {
         display: block;
+        transform: none !important;
     }
 
     #Skills {
         display: block;
+        transform: none !important;
     }
 
     #Hobbies {
         display: block;
+        transform: none !important;
     }
 
     #Bio {
@@ -319,9 +327,39 @@ picture > img {
     }
 }
 
-@media (prefers) {
+@media (prefers-color-scheme: dark) {
+    /* Styles for dark mode */
+    header h1 {
+        color: var(--text--color-header);
+    }
 
+    nav button{
+        margin: 0;
+    }
 
+    .Info {
+       
+    }
+
+    #About {
+       
+    }
+
+    #Personality {
+       
+    }
+
+    #Skills {
+       
+    }
+
+    #Hobbies {
+       
+    }
+
+    #Bio {
+        
+    }
 }
 
 
