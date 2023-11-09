@@ -135,6 +135,7 @@ picture > img {
 
 #Bio {
     background-color: antiquewhite;
+    height: 30dvh;
     grid-column-start: 2 ;
     grid-column-end: 6;
     grid-row-start: 2;
