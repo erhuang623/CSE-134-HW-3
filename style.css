@@ -3,14 +3,23 @@
     --secondary--color--header: hsl(0, .4%, 48.8%);
     --ternary--color--header: hsl(53, 25%, 73.3%);
     --other--color--header: hsl(0, 6.7%, 94.1%);
-    /* font-size: 62.5%; */
+    --red--white--mix: colormix(red, white); 
+
+
+}
+
+@font-face {
+    font-family: 'exo2';
+    src: url('fonts/Exo2-VariableFont_wght.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 
 }
 
 * {
     margin: 0;
     font-size: 1.2 rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'exo2','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     letter-spacing: .1rem;
     line-height: 1.7rem;
 }
@@ -18,13 +27,16 @@
 header {
     font-size: 25px;
     color: white;
-    background-color: var(--main--color--header); 
-    height: 6.5rem;
+    background-color: var(--main--color--header,black); 
+    height: 11dvh;
+    width: auto;
     text-align: center;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
 }
 
+header > h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
 *,
 *::before,
@@ -35,12 +47,13 @@ header {
 nav > button {
     color: black;
     border: 1px solid black;
-    background-color: var(--other--color--header);
+    background-color: var(--other--color--header,white);
     padding: 5px 15px; /*button size*/;
     font-size: medium;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'exo2', Arial, Helvetica, sans-serif;
     transition: all .5s ease-out;
     border-radius: 5%;
+
 }
 
 nav > button:hover, button:focus {
@@ -69,17 +82,26 @@ nav {
 
 }
 
+.Info h1 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
 
 .Self  {
     grid-column-start: 2;
-    
 }
+
+
 
 body {
     background-color: var(--other--color--header);
 }
 picture > img {
-    border: 5px solid var(--main--color--header);
+    border: 3px solid var(--main--color--header);
+}
+
+.Info section {
+    padding-top: 2rem;
 }
 
 #About {
@@ -89,6 +111,7 @@ picture > img {
     grid-row-start: 1;
     font-size: 1.1rem;
     border-radius: 10%;
+
 }
 
 #About:hover {
@@ -135,12 +158,12 @@ picture > img {
 
 #Bio {
     background-color: antiquewhite;
-    height: 30dvh;
     grid-column-start: 2 ;
     grid-column-end: 6;
     grid-row-start: 2;
-    padding-left: 2em;
-    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    padding-right: 2rem;
     border-radius: 5%;
     overflow: hidden;
 }
@@ -150,7 +173,7 @@ picture > img {
     animation-name: slide;
 }
 
-/* @keyframes slide {
+@keyframes slide {
     from {
         margin-left: 100%;
         width: 300%;
@@ -160,26 +183,31 @@ picture > img {
         margin-left: 0%;
         width: 100%;
       }
-} */
-.container {
-	display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 300px;
-    text-align: center;
-    column-gap: 20px;
 }
 
+.flex {
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: stretch;
+	align-items: center;
+	align-content: stretch;
+    text-align: center;
+    background-color: var(--ternary--color--header);
+    border-radius: 10%;
+}
 
 .references {
     display:  grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    bottom: 0;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 #links {
     grid-row-start: 1;
     grid-column-start: 2;
-    
 }
 
 #links > a{
@@ -193,16 +221,107 @@ picture > img {
 .references > a:visited {
     text-decoration: none;
 }
+ 
 
-
-
-/*
-@media  screen and (max-width: 640px) {
-    nav:first-child {
-        visibility: visible;
-    }
+.container {
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 300px;
+    text-align: center;
+    column-gap: 20px;
     
 }
-*/
+
+.container #projectOne {
+    grid-row-start: 2;
+}
+
+.container #projectTwo {
+    grid-row-start: 2;
+}
+
+.container #projectThree {
+    grid-row-start: 2;
+}
+
+@media screen and (max-width: 600px) {
+
+    header {
+        display: block;
+    }
+
+    header h1 {
+        display: block;
+    }
+
+    nav button{
+        margin: 0;
+    }
+
+    .Info {
+        display: block;
+    }
+
+    #About {
+        display: block;
+    }
+
+    #Personality {
+        display: block;
+    }
+
+    #Skills {
+        display: block;
+    }
+
+    #Hobbies {
+        display: block;
+    }
+
+    #Bio {
+        display: block;
+    }
+
+}
+
+
+@media screen and (max-width: 1000px) {
+    header h1 {
+        display: block;
+    }
+
+    nav button{
+        margin: 0;
+    }
+
+    .Info {
+        display: block;
+    }
+
+    #About {
+        display: block;
+    }
+
+    #Personality {
+        display: block;
+    }
+
+    #Skills {
+        display: block;
+    }
+
+    #Hobbies {
+        display: block;
+    }
+
+    #Bio {
+        display: block;
+    }
+}
+
+@media (prefers) {
+
+
+}
 
 
