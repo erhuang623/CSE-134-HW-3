@@ -1,11 +1,13 @@
 :root {
+    /* Default Color Mode */
     --main--color--header: hsl(0, 4.2%, 9.4%);
     --secondary--color--header: hsl(0, .4%, 48.8%);
     --ternary--color--header: hsl(53, 25%, 73.3%);
     --other--color--header: hsl(0, 6.7%, 94.1%);
     --red--white--mix: colormix(red, white); 
+    /* Dark Mode */
 
-
+    
 }
 
 @font-face {
@@ -94,10 +96,10 @@ nav {
 
 
 body {
-    background-color: var(--other--color--header);
+    background-color: var(--other--color--header,white);
 }
 picture > img {
-    border: 3px solid var(--main--color--header);
+    border: 3px solid var(--main--color--header,white);
 }
 
 .Info section {
@@ -193,8 +195,6 @@ picture > img {
 	align-items: center;
 	align-content: stretch;
     text-align: center;
-    background-color: var(--ternary--color--header);
-    border-radius: 10%;
 }
 
 .references {
